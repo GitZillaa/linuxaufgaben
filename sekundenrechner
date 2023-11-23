@@ -1,0 +1,32 @@
+#!/bin/bash
+
+convert_seconds() {
+seconds=$1
+
+#convert
+minutes=$((seconds / 60))
+hours=$((minutes / 60))
+days=$((hours / 24))
+months=$((days / 30)) #wird monatlich nur mit 30 tagen gerechnet
+years=$((months / 12))
+
+
+
+#ergebnisse
+echo "Sekunden: §seconds"
+echo "Minuten: $minutes"
+echo "Stunden: $hours"
+echo "Tage: $days"
+echo "Monate: $months"
+echo "Jahre: $years"
+}
+ 
+#Eingabe
+
+echo "Wie viele Sekunden soll ich umrechnen:"
+read input_seconds
+
+#funktionsaufruf
+
+convert_seconds "$input_seconds"
+
